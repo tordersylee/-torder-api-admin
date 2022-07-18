@@ -1,0 +1,15 @@
+version: '3.3'
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - PHP_ENVIRONMENT
+    container_name: torder-api-admin
+    image: torder-api-admin_image
+    ports:
+      - 8001:80
+      - 4431:443
+    volumes:
+      - .:/var/www/html/
